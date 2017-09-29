@@ -1,4 +1,4 @@
-package com.jungle.lesson;
+package com.jungle.hdeng;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
