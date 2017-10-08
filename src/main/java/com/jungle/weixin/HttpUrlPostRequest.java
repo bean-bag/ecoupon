@@ -1,15 +1,11 @@
 package com.jungle.weixin;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.net.URLConnection;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import org.codehaus.jackson.map.ObjectMapper;
 
 public class HttpUrlPostRequest {
 
@@ -19,8 +15,8 @@ public class HttpUrlPostRequest {
 		requestUrl = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + ACCESS_TOKEN;
 
 		URLConnection httpUrlConn = null;
-		InputStream inputStream = null;
-		BufferedReader bufferedReader = null;
+		// InputStream inputStream = null;
+		// BufferedReader bufferedReader = null;
 		try {
 
 			URL url = new URL(requestUrl);
@@ -37,18 +33,11 @@ public class HttpUrlPostRequest {
 			osw.flush();
 			osw.close();
 			// 将返回的输入流转换成字符串
-			inputStream = httpUrlConn.getInputStream();
-			bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
-			Gson g = new GsonBuilder().create();
-			return g.fromJson(bufferedReader, BaseResult.class);
+
+			ObjectMapper om = new ObjectMapper();
+			return om.readValue(httpUrlConn.getInputStream(), BaseResult.class);
 
 		} finally {
-			bufferedReader.close();
-			// 释放资源
-			inputStream.close();
-			inputStream = null;
-			// httpUrlConn.disconnect();
-			// httpUrlConn.
 		}
 
 	}

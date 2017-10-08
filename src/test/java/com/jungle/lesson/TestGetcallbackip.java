@@ -24,9 +24,12 @@ public class TestGetcallbackip extends BaseTestCase {
 
 		log.info(config.getAppID());
 		log.info(appsecret);
-		String access_token = "1wgX4h48CqkPm3eFwirKK2gtaa_D_bJByCFceDQQDLd4WqKk06j68PzdOwUJAx213M39MkgKqBF41RX0WtG70Q16Pa_DZ-8mbUnKuxxEUarpt9CcHW228lJIE9DIG8APXHPjAEAOYG";
-		String url0 = "https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=1wgX4h48CqkPm3eFwirKK2gtaa_D_bJByCFceDQQDLd4WqKk06j68PzdOwUJAx213M39MkgKqBF41RX0WtG70Q16Pa_DZ-8mbUnKuxxEUarpt9CcHW228lJIE9DIG8APXHPjAEAOYG";
-		String url1 = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc2500b2ff1e9393d&secret=c44310818f64ff1d16b43de6fdc972e8";
+		// String access_token =
+		// "1wgX4h48CqkPm3eFwirKK2gtaa_D_bJByCFceDQQDLd4WqKk06j68PzdOwUJAx213M39MkgKqBF41RX0WtG70Q16Pa_DZ-8mbUnKuxxEUarpt9CcHW228lJIE9DIG8APXHPjAEAOYG";
+		// String url0 =
+		// "https://api.weixin.qq.com/cgi-bin/getcallbackip?access_token=1wgX4h48CqkPm3eFwirKK2gtaa_D_bJByCFceDQQDLd4WqKk06j68PzdOwUJAx213M39MkgKqBF41RX0WtG70Q16Pa_DZ-8mbUnKuxxEUarpt9CcHW228lJIE9DIG8APXHPjAEAOYG";
+		// String url1 =
+		// "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxc2500b2ff1e9393d&secret=c44310818f64ff1d16b43de6fdc972e8";
 
 	}
 }

@@ -20,7 +20,7 @@ public class HttpUrlGetRequestTest extends BaseTestCase {
 	public void testHttpRequest() throws IOException, URISyntaxException {
 		ClientSDK cSdk = new ClientSDK(config.getAppID(), config.getAppsecret());
 		HttpUrlGetRequest hur = new HttpUrlGetRequest();
-		TokenResult tr = hur.get(cSdk.token().toURI().toString(), "GET");
+		TokenResult tr = hur.get(cSdk.token().toURI().toString());
 		System.out.println(tr);
 		assertTrue(tr != null);
 	}
